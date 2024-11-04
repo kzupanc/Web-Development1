@@ -1,0 +1,49 @@
+body {
+    background-color: #C8D9E6;
+}
+
+h1 {
+    color: cadetblue;
+}
+
+h2 {
+    color: darkblue;
+    font-size: large;
+}
+
+#search {
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#search:hover {
+    width: 500px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.category {
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+.category strong {
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+img {
+  border: 5px blue dotted;
+  padding: 4px;
+}
+
+img:hover {
+  border: 6px red solid;
+}
+
+ul {
+    color: darkgreen;
+    font-family: Arial;
+    font-size: medium;
+}
