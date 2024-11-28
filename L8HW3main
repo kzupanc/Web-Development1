@@ -1,0 +1,16 @@
+x = int(input("Vnesi prvo število (x): "))
+
+y = int(input("Vnesi drugo število (y): "))
+
+operation = input("Izberi matematično operacijo (+, -, *, /): ")
+
+if operation == "+":
+    print(x + y)
+elif operation == "-":
+    print(x - y)
+elif operation == "*":
+    print(x * y)
+elif operation == "/":
+    print(x / y)
+else:
+    print("Te matematične operacije žal ne poznam")
