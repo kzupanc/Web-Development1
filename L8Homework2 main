@@ -1,0 +1,8 @@
+secret = 12
+
+guess = int(input("Ugibaj, katero številko imam zdajle v mislih? (1 - 20): "))
+
+if guess == secret:
+    print("UGANIL SI!!! ČESTITAM :-)")
+else:
+    print("Več sreče prihodnjič! :(   Moja številka je " + str(guess))
