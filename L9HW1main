@@ -1,0 +1,11 @@
+print("ŽIVIJO!")
+print("Pretvoril bom kilometre v milje")
+while True:
+    kilometer = input("Vnesi razdaljo v km: ")
+    kilometer = float(kilometer.replace(",", "."))
+    milja = kilometer * 0.621371
+    print("{0} kilometrov je {1} milj.".format(kilometer, milja))
+    odloc = input("Želiš nadaljevati? DA/NE ")
+    if odloc == "NE":
+        break
+print("Ciao!!!")
