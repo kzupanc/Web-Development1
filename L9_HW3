@@ -1,0 +1,11 @@
+# S pomocjo Copilot-a
+# Function to convert a string to lowercase
+
+def to_lowercase(input_string):
+    return input_string.lower()
+
+
+print("PoLJuben NIZ ti PRETVORIM v male crke.")
+string = input("Vnesi prosim niz, ki ga želiš pretvoriti v male črke. ")
+lowercase_string = to_lowercase(string)
+print(lowercase_string)
