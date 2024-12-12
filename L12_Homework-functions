@@ -1,0 +1,21 @@
+import json
+import datetime
+
+def uvod():
+    print("****    NUMBER GUESSING GAME   ****")
+    print("")
+
+
+def top_scores():
+
+    print("Top scores: ")
+
+# Load JSON data from a file
+    with open('score_list.json', 'r') as score_file:
+        score_data = json.load(score_file)
+
+    # Iterate through each dictionary in the JSON data
+    for item in score_data:
+    # Extract values and join them with commas
+        print(', '.join(f"{key}: {value}" for key, value in item.items()))
+
