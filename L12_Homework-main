@@ -1,0 +1,53 @@
+import random
+import json
+import datetime
+import os
+from functions import uvod, top_scores
+
+uvod()
+
+secret = random.randint(1, 30)
+attempts = 0
+
+# Initialize score_list
+score_list = []
+
+# Check if the file exists and load data
+if os.path.exists("score_list.json"):
+    with open("score_list.json", "r") as score_file:
+        try:
+            score_list = json.load(score_file)
+        except json.JSONDecodeError:
+            score_list = []
+
+top_scores()
+
+current_time = datetime.datetime.now()
+print("")
+name = str(input("What's your name? "))
+
+# for score_dict in score_list:
+# print(str(score_dict["attempts"]))
+
+while True:
+    while True:
+
+        guess = int(input("Guess the secret number (between 1 and 30): "))
+        attempts += 1
+        if guess == secret:
+            score_list.append({"name": name, "attempts": attempts, "secret": secret, "date": str(datetime.datetime.now())})
+            print(current_time)
+            with open("score_list.json", "w") as score_file:
+                score_file.write(json.dumps(score_list))
+            print("You've guessed it - congratulations! It's number " +
+                str(secret))
+            print("Attempts needed: " + str(attempts))
+            break
+        elif guess > secret:
+            print("Your guess is not correct... try something smaller")
+        elif guess < secret:
+            print("Your guess is not correct... try something bigger")
+
+    decision = (int(input("Play again? 1(Yes) / 0(No)  ")))
+    if decision != 1:
+        break
